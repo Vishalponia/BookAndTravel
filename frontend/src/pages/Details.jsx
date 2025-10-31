@@ -11,7 +11,8 @@ export default function Details() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/experiences/${id}`)
+      //.get(`http://localhost:5000/experiences/${id}`)
+      .get(`https://bookandtravel-1.onrender.com/experiences/${id}`)
       .then((res) => {
         setExperience(res.data);
         setLoading(false);

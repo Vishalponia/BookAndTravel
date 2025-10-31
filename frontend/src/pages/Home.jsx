@@ -8,7 +8,9 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/experiences")
+      //.get("http://localhost:5000/experiences")
+      .get(axios.get("https://bookandtravel-1.onrender.com/experiences")
+)
       .then((res) => {
         setExperiences(res.data);
         setLoading(false);

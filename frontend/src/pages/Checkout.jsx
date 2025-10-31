@@ -24,7 +24,8 @@ export default function Checkout() {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/bookings", {
+     // const res = await axios.post("http://localhost:5000/bookings", {
+      const res = await axios.post("https://bookandtravel-1.onrender.com/bookings", {
         experienceId: id,
         name: form.name,
         email: form.email,
@@ -77,11 +78,11 @@ export default function Checkout() {
           </div>
 
           <div>
-            <label className="block mb-1 font-medium">Phone number </label>
+            <label className="block mb-1 font-medium">Promo Code</label>
             <input
               type="text"
-              name="phoneNumber"
-              value={form.phoneNumber}
+              name="promoCode"
+              value={form.promoCode}
               onChange={handleChange}
               required
               className="w-full border rounded-md p-2"
